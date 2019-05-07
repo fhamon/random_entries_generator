@@ -49,13 +49,14 @@
                 );
                 $button = new XMLElement(
                     'a',
-                    Widget::SVGIcon('random') . '<span><span>' . __('Create random entry') . '</span></span>',
+                    Widget::SVGIcon('random'),
                     array(
                         'href' => APPLICATION_URL . '/extension/random_entries_generator/create/?s=' . $section,
-                        'class' => 'button'
+                        'class' => 'button',
+                        'title' => __('Create random entry')
                     )
                 );
-                $page->insertAction($button, true);
+                $page->insertAction($button, false);
             }
         }
 

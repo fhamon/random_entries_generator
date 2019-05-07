@@ -42,7 +42,7 @@
                 $length = General::intval($field->get('text_length'));
             }
             return TextGenerator::generate(array(
-                'max-length' => $size == 'single' ? min(mt_rand(20, 60), $length) : $length,
+                'max-length' => $size == 'single' ? mt_rand(20, 120) : $length,
                 'paragraphs' => self::$sizes[$size],
                 'locale' => $locale,
                 'formatter' => $formatter,
